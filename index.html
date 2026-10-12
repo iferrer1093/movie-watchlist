@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <h1>Blah</h1>
-    <script src="script.js"></script>
+    <h1>Movie Watchlist</h1>
+
+
+    <form id="movie-form">
+        <label for="title">Enter movie name</label>
+        <input type="text" id="titleInput" placeholder="Enter the movie title">
+
+
+        <label for="genreSelect">Genre:</label>
+        <select name="genreSelect" id="genreSelect">
+            <option value="">Choose a genre option</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Western">Western</option>
+            <option value="Drama">Drama</option>
+        </select>
+
+        <button type="submit">Add Movie</button>
+    </form>
+
+    <p id="form-message"></p>
+
+    <ul id="movie-list"></ul>
+
+    <p id="empty-message">The watchlist is empty</p>
 </body>
+
 </html>
