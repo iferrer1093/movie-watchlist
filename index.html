@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie Watchlist</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -27,14 +27,15 @@
             <option value="Drama">Drama</option>
         </select>
 
+        <label for="submit">Submit movie</label>
         <button type="submit">Add Movie</button>
     </form>
 
-    <p id="form-message"></p>
+    <p id="form-message" class="form-message"></p>
 
     <ul id="movie-list"></ul>
 
-    <p id="empty-message">The watchlist is empty</p>
+    <p id="empty-message" class="empty-message">The watchlist is empty</p>
 </body>
 
 </html>
