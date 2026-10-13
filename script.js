@@ -6,7 +6,7 @@ const movieList = document.getElementById("movie-list");
 const emptyMessage = document.getElementById("empty-message");
 
 const watchlist = {
-    movies: [{ title: "Shrek", genre: "Adventure", watched: false }],
+    movies: [],
     toggleWatched(index) {
         // TODO (Step 4)
         this.movies[index].watched = !this.movies[index].watched;
@@ -19,10 +19,19 @@ const watchlist = {
 
 function saveMovies() {
     // TODO (Step 6)
+    localStorage.setItem("movies", JSON.stringify(watchlist.movies));
 }
 
 function loadMovies() {
     // TODO (Step 6)
+    const localMovies = localStorage.getItem("movies")
+    if (localMovies !== null){
+        try {
+            watchlist.movies = JSON.parse(localMovies)
+        } catch (error) {
+            watchlist.movies = [];
+        }
+    }
 }
 
 function renderMovies() {
